@@ -249,10 +249,7 @@ if (
             vertical-align: middle;
         }
 
-        .footer-distributed .footer-center i.fa-envelope {
-            font-size: 17px;
-            line-height: 38px;
-        }
+    
 
         .footer-distributed .footer-center p {
             display: inline-block;
@@ -314,7 +311,66 @@ if (
             margin-right: 3px;
             margin-bottom: 5px;
         }
-
+        .demopadding {
+  margin:50px auto;
+  width:140px;
+  text-align:center;
+}
+.icon {
+	position:relative;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding:20px;
+	border-top-right-radius: 	20px;
+	border-top-left-radius: 	20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 	20px; 
+	-moz-border-radius: 		20px 20px 20px 20px;
+	-webkit-border-radius: 		20px 20px 20px 20px;
+	-khtml-border-radius: 		20px 20px 20px 20px; 	
+	color:#FFFFFF;
+}
+.icon i {
+	font-size:20px;
+	position:absolute;
+	left:9px;
+	top:10px;
+}
+.icon.social {
+	float:left;
+	margin:0 5px 0 0;
+	cursor:pointer;
+	background:#f2f2f2 ;
+	color:#262626;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 	
+}
+.icon.social:hover {
+	background:#262626 ;
+	color:#6d6e71;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	-webkit-filter:	drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-moz-filter: 	drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-ms-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-o-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	filter: 			drop-shadow(0 1px 10px rgba(0,0,0,.8));	 	
+}
+.icon.social.fb i {
+	left:13px;
+	top:10px;
+}
+.icon.social.ig i {
+	left:11px;
+}
+.icon.social.in i {
+	left:11px;
+}
         @media (max-width: 880px) {
 
             .footer-distributed .footer-left,
@@ -400,7 +456,7 @@ if (
                                         <h5>Design</h5>
                                     </div>
                                 </label>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -417,12 +473,12 @@ if (
         <div class="footer-left">
             <p class="footer-company-about">
                 <span>Feel free to ask us anything.</span>
-                Our social handles</p>
-            <div class="footer-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-            </div>
+                Our social handles :</p>
+                <div class='demopadding'>
+                                        <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+                                        <div class='icon social ig'><i class='fa fa-instagram'></i></div>
+                                        <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+                                    </div>
         </div>
         <div class="footer-center">
             <div class="vl"></div>
