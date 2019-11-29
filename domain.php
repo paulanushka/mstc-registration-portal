@@ -13,8 +13,10 @@ if (
 
 <head>
     <title>STC Registration portal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style type="text/css">
         #search {
@@ -158,6 +160,47 @@ if (
             margin-left: 30%;
         }
 
+        label {
+            display: block;
+            border: solid 1px gray;
+            line-height: 40px;
+            height: 60px;
+            width: 250px;
+            border-radius: 40px;
+            -webkit-font-smoothing: antialiased;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+            text-align: center;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        input:checked+label {
+            border: solid 3px#4D9BF7;
+            color: white;
+        }
+
+        input:checked+label:before {
+            content: "\2713 ";
+        }
+
+        .check {
+            visibility: hidden;
+        }
+
+        input.checkbox:checked+label:before {
+            content: "";
+        }
+
+        .demopadding {
+            margin: 50px auto;
+            width: 140px;
+            text-align: center;
+        }
+
         footer {
             position: fixed;
             bottom: 0;
@@ -249,7 +292,7 @@ if (
             vertical-align: middle;
         }
 
-    
+
 
         .footer-distributed .footer-center p {
             display: inline-block;
@@ -311,66 +354,7 @@ if (
             margin-right: 3px;
             margin-bottom: 5px;
         }
-        .demopadding {
-  margin:50px auto;
-  width:140px;
-  text-align:center;
-}
-.icon {
-	position:relative;
-	text-align:center;
-	width:0px;
-	height:0px;
-	padding:20px;
-	border-top-right-radius: 	20px;
-	border-top-left-radius: 	20px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 	20px; 
-	-moz-border-radius: 		20px 20px 20px 20px;
-	-webkit-border-radius: 		20px 20px 20px 20px;
-	-khtml-border-radius: 		20px 20px 20px 20px; 	
-	color:#FFFFFF;
-}
-.icon i {
-	font-size:20px;
-	position:absolute;
-	left:9px;
-	top:10px;
-}
-.icon.social {
-	float:left;
-	margin:0 5px 0 0;
-	cursor:pointer;
-	background:#f2f2f2 ;
-	color:#262626;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 	
-}
-.icon.social:hover {
-	background:#262626 ;
-	color:#6d6e71;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	-webkit-filter:	drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	-moz-filter: 	drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	-ms-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	-o-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	filter: 			drop-shadow(0 1px 10px rgba(0,0,0,.8));	 	
-}
-.icon.social.fb i {
-	left:13px;
-	top:10px;
-}
-.icon.social.ig i {
-	left:11px;
-}
-.icon.social.in i {
-	left:11px;
-}
+
         @media (max-width: 880px) {
 
             .footer-distributed .footer-left,
@@ -407,88 +391,23 @@ if (
             <li>Interested Domain</li>
         </ul>
     </div><br><br><br>
-    <form action= "thanku.php" method="post">
+    <form action="thanku.php" method="post">
         <div class="form">
             <i class="far fa-circle"></i> <b>Interested Domains</b>
             <br> <br>
             <p>(Please select below)</p>
-            <div class="form-group">
-                <div class="items-collection">
-
-                    <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <div class="info-block block-info clearfix">
-                            <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                <label class="btn btn-secondary">
-                                    <div class="itemcontent">
-                                        <input type="checkbox" name="tec" autocomplete="off" value="Yes">
-                                        <img src="tech.png" style="width: 40px; height: 40px;">
-                                        <h5>Technical</h5>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <div class="info-block block-info clearfix">
-                            <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                <label class="btn btn-secondary">
-                                    <div class="itemcontent">
-                                        <input type="checkbox" name="man" autocomplete="off" value="Yes">
-                                        <img src="management.png" style="width: 40px; height: 40px;">
-                                        <h5>Management</h5>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <div class="info-block block-info clearfix">
-                            <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                <label class="btn btn-secondary">
-                                    <div class="itemcontent">
-                                        <input type="checkbox" name="des" autocomplete="off" value="Yes">
-                                        <img src="design.png" style="width: 40px; height: 40px;">
-                                        <h5>Design</h5>
-                                    </div>
-                                </label>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <input class="btn btn-primary" type="submit" name="Submit" value="Submit">
-            <!-- <input type="checkbox"><button type="button" class="btn btn-outline-info" style="outline: none; border: none; width:300px; height:70px;margin-left: 10px;"><img src="tech.png" style="width: 40px; height: 40px;"> Technical</button><br><br></input> -->
-            <!-- <button type="button" class="btn btn-outline-info" style="outline: none; border: none; width:300px; height: 70px; margin-left: 25px;"><img src="management.png" style="width: 40px; height: 40px;"> Management</button><br><br>
-        <button type="button" class="btn btn-outline-info" style="outline: none; border: none; width:300px; height: 70px;"><img src="design.png" style="width: 40px; height: 40px;"> Design</button><br><br>
-        <button class="btn btn-primary" style="margin-left: 200px; width: 100px;">Submit</button> -->
-        </div>
+            <input class="checkbox" id="lists[new]" type="checkbox" name="tec" value="Yes" />
+            <label for="lists[new]"><span class="check">✓</span><img src="tech.png"
+                    style="width: 40px; height: 40px;">Technical</label>
+            <input class="checkbox" id="lists[new1]" type="checkbox" name="man" value="Yes" />
+            <label for="lists[new1]"><span class="check">✓</span><img src="management.png"
+                    style="width: 40px; height: 40px;">Management</label>
+            <input class="checkbox" id="lists[new2]" type="checkbox" name="des" value="Yes" />
+            <label for="lists[new2]"><span class="check">✓</span><img src="design.png"
+                    style="width: 40px; height: 40px;">Design</label>
+            <button class="btn btn-primary" style="margin-left: 200px; width: 100px; margin-left: 20%;">Submit</button>
     </form>
 
-    <footer class="footer-distributed">
-        <div class="footer-left">
-            <p class="footer-company-about">
-                <span>Feel free to ask us anything.</span>
-                Our social handles :</p>
-                <div class='demopadding'>
-                                        <div class='icon social fb'><i class='fa fa-facebook'></i></div>
-                                        <div class='icon social ig'><i class='fa fa-instagram'></i></div>
-                                        <div class='icon social in'><i class='fa fa-linkedin'></i></div>
-                                    </div>
-        </div>
-        <div class="footer-center">
-            <div class="vl"></div>
-        </div>
-        <div class="footer-right">
-
-            <img src="stc.png">
-            <p class="footer-company-name"><b>Student Technical Community</b></p>
-        </div>
-    </footer>
 
 </body>
 
