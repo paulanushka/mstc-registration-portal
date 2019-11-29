@@ -373,9 +373,9 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
                 <span>Feel free to ask us anything.</span>
                 Our social handles</p>
             <div class="footer-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.facebook.com/mstcvit/?ref=br_rs"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/micvitvellore/about/"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
         <div class="footer-center">
