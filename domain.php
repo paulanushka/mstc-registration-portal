@@ -475,9 +475,9 @@ if (
                 <span>Feel free to ask us anything.</span>
                 Our social handles :</p>
                 <div class='demopadding'>
-                                        <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+			                <div class='icon social fb'><a href="https://www.facebook.com/mstcvit/?ref=br_rs"><i class='fa fa-facebook'></i></a></div>
                                         <div class='icon social ig'><i class='fa fa-instagram'></i></div>
-                                        <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+                                        <div class='icon social in'><a href="https://www.linkedin.com/company/micvitvellore/about/"><i class='fa fa-linkedin'></i></a></div>
                                     </div>
         </div>
         <div class="footer-center">
