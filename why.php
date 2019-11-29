@@ -328,6 +328,7 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             <!-- <button class="btn btn-primary" onclick="index4.html">Next</button> -->
             <input class="btn btn-primary" type="submit" name="Submit" value="Next">
         </div>
+    </form>
         <footer class="footer-distributed">
             <div class="footer-left">
                 <p class="footer-company-about">

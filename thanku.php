@@ -1,13 +1,60 @@
 <?php
 session_start();
 
-$_SESSION['why'] = filter_input(INPUT_POST, 'why');
+// $_SESSION['man'] = filter_input(INPUT_POST, 'name');
+// $_SESSION['tec'] = filter_input(INPUT_POST, 'phone');
+// $_SESSION['des'] = filter_input(INPUT_POST, 'email');
 
-if (
-    !($_SESSION['why'])
-) {
-    header("Location: index.php");
+if (isset($_POST['des']) && $_POST['des'] == 'Yes') {
+    $_SESSION['des'] = "Yes";
+} else {
+    $_SESSION['des'] = "No";
 }
+if (isset($_POST['man']) && $_POST['man'] == 'Yes') {
+    $_SESSION['man'] = "Yes";
+} else {
+    $_SESSION['man'] = "No";
+}
+if (isset($_POST['tec']) && $_POST['tec'] == 'Yes') {
+    $_SESSION['tec'] = "Yes";
+} else {
+    $_SESSION['tec'] = "No";
+}
+
+// echo $_SESSION['email'];
+
+if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) or !($_SESSION['regno']) or !($_SESSION['why'])) {
+    header("Location: index.php");
+} else if ($_SESSION['man'] == "No" and $_SESSION['tec'] == "No" and $_SESSION['des'] == "No") {
+    header("Location: domain.php");
+} else {
+
+    // echo "here";
+    $name = $_SESSION['name'];
+    $number = $_SESSION['phone'];
+    $email = $_SESSION['email'];
+    $regno = $_SESSION['regno'];
+    $why = $_SESSION['why'];
+    $tech = $_SESSION['tec'];
+    $man = $_SESSION['man'];
+    $des = $_SESSION['des'];
+
+
+
+    require_once('connection.php');
+    // $sql="INSERT INTO users(name, email, mobile_number,password,repass) values ('$n', '$e','$nu','$pa','$repa')";
+    $sql = "INSERT INTO registration (`name`,`number`,`email`,`regno`,`why`,`technical`,`design`,`management`)VALUES('$name','$number','$email','$regno','$why','$tech','$des','$man')";
+
+    if (mysqli_connect_error()) {
+        die('Connect Error(' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+    } else { }
+    if ($con->query($sql)) {
+        // echo"<font color='green'>"."Your account has been created successfully!"."</font>";
+        // echo "done";
+    }
+}
+
+
 ?>
 <html>
 
@@ -16,40 +63,8 @@ if (
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
     <style type="text/css">
-        #search {
-            width: 90%;
-        }
-
-        .searchicon {
-            color: #5CB85C;
-        }
-
-        .items-collection {
-            margin: 20px 0 0 0;
-        }
-
-        .items-collection label.btn-default.active {
-            background-color: #007ba7;
-            color: #FFF;
-        }
-
-        .items-collection label.btn-default {
-            width: 90%;
-            border: 1px solid #305891;
-            margin: 5px;
-            border-radius: 17px;
-            color: #305891;
-        }
-
-        .items-collection label .itemcontent {
-            width: 100%;
-        }
-
-        .items-collection .btn-group {
-            width: 90%
-        }
-
         body {
             background-color: #101C29;
             color: white;
@@ -64,6 +79,11 @@ if (
             display: flex;
             padding: 0.5%;
             box-shadow: 50px;
+        }
+
+        .paragraph {
+            padding: 5%;
+            margin-left: 20%;
         }
 
         .vl {
@@ -139,10 +159,6 @@ if (
             background-color: green;
         }
 
-        .progressbar li.active+li:after {
-            background-color: green;
-        }
-
         .form {
             margin-left: 30%;
             margin-right: 30%;
@@ -154,8 +170,8 @@ if (
             font-family: sans-serif;
         }
 
-        .paragraph {
-            margin-left: 30%;
+        button {
+            float: right;
         }
 
         footer {
@@ -344,75 +360,13 @@ if (
             <img src="stc.png" width="130" height="70" class="d-inline-block align-top" alt="">
         </a>
     </nav>
-    <div class="container">
-        <ul class="progressbar">
-            <li class="active">General Information</li>
-            <li class="active">Q/A</li>
-            <li>Interested Domain</li>
-        </ul>
-    </div><br><br><br>
-    <form action= "thanku.php" method="post">
-        <div class="form">
-            <i class="far fa-circle"></i> <b>Interested Domains</b>
-            <br> <br>
-            <p>(Please select below)</p>
-            <div class="form-group">
-                <div class="items-collection">
-
-                    <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <div class="info-block block-info clearfix">
-                            <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                <label class="btn btn-secondary">
-                                    <div class="itemcontent">
-                                        <input type="checkbox" name="tec" autocomplete="off" value="Yes">
-                                        <img src="tech.png" style="width: 40px; height: 40px;">
-                                        <h5>Technical</h5>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <div class="info-block block-info clearfix">
-                            <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                <label class="btn btn-secondary">
-                                    <div class="itemcontent">
-                                        <input type="checkbox" name="man" autocomplete="off" value="Yes">
-                                        <img src="management.png" style="width: 40px; height: 40px;">
-                                        <h5>Management</h5>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <div class="info-block block-info clearfix">
-                            <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                <label class="btn btn-secondary">
-                                    <div class="itemcontent">
-                                        <input type="checkbox" name="des" autocomplete="off" value="Yes">
-                                        <img src="design.png" style="width: 40px; height: 40px;">
-                                        <h5>Design</h5>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <input class="btn btn-primary" type="submit" name="Submit" value="Submit">
-            <!-- <input type="checkbox"><button type="button" class="btn btn-outline-info" style="outline: none; border: none; width:300px; height:70px;margin-left: 10px;"><img src="tech.png" style="width: 40px; height: 40px;"> Technical</button><br><br></input> -->
-            <!-- <button type="button" class="btn btn-outline-info" style="outline: none; border: none; width:300px; height: 70px; margin-left: 25px;"><img src="management.png" style="width: 40px; height: 40px;"> Management</button><br><br>
-        <button type="button" class="btn btn-outline-info" style="outline: none; border: none; width:300px; height: 70px;"><img src="design.png" style="width: 40px; height: 40px;"> Design</button><br><br>
-        <button class="btn btn-primary" style="margin-left: 200px; width: 100px;">Submit</button> -->
-        </div>
-    </form>
-
+    <div class="verify">
+        <img src="verify.png" alt="verified" style="margin-left: 37%; margin-top: 5%; width: 240px; height: 240px;">
+    </div>
+    <div class="paragraph">
+        <h4>Thanks for registering with us</h4><br><br>
+        <p>You will be intimated of the further details on the email address provided by you shortly.</p>
+    </div>
     <footer class="footer-distributed">
         <div class="footer-left">
             <p class="footer-company-about">
