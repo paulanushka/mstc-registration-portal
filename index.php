@@ -6,6 +6,7 @@ session_start();
 <head>
     <title>STC Registration portal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
@@ -14,13 +15,14 @@ session_start();
         }
 
         #navBar {
-            position: fixed;
+            /* position: fixed; */
+            align: center;
             width: 100vw;
             height: 95px;
             background-color: #061F2F;
             transition: 0.2s;
             display: flex;
-            padding: 0.5%;
+            /* padding: 0.5%; */
             box-shadow: 50px;
         }
 
@@ -110,8 +112,9 @@ session_start();
         }
 
         .form {
-            margin-left: 30%;
+            margin-left: 20%;
             margin-right: 30%;
+            align-content;:center
         }
 
         #clone {
@@ -129,10 +132,7 @@ session_start();
             margin-left: 30%;
         }
 
-        .form {
-            margin-left: 30%;
-            margin-right: 30%;
-        }
+        
 
         #clone {
             font-size: 25px;
@@ -162,6 +162,8 @@ session_start();
         }
 
         @media (max-height:800px) {
+
+
             footer {
                 position: static;
             }
@@ -169,7 +171,64 @@ session_start();
             header {
                 padding-top: 40px;
             }
+
+            .form {
+            margin-left: 20%;
+            margin-right: 5%;
         }
+        .container {
+            width: 100%;
+            /* padding: -1%; */
+            padding-left: -100px;
+        }
+
+
+        .pro{
+    margin-right:7%;
+}
+ 
+.headd{
+    padding-right:19%;
+
+
+    padding-top:-100px;
+}
+
+.demopadding {
+  /* margin:50px auto; */
+  /* margin-top:10px; */
+  width:140px;
+  text-align:center;
+}
+
+.med{
+    padding-bottom: 10px;
+}
+        }
+
+        /* @media (max-height:600px){
+            footer {
+                position: static;
+            }
+
+            header {
+                padding-top: 40px;
+            }
+
+            
+            .form {
+            margin-left: 80%;
+            margin-right: 15%;
+        }
+
+        .demopadding {
+  margin:50px auto;
+  margin-top:10px;
+  width:140px;
+  text-align:center;
+}
+
+        } */
 
 
         .footer-distributed {
@@ -314,6 +373,7 @@ session_start();
         }
         .demopadding {
   margin:50px auto;
+  /* margin-top:10px; */
   width:140px;
   text-align:center;
 }
@@ -398,22 +458,33 @@ session_start();
 
 <body>
     <!-- Image and text -->
-    <nav class="navbar navbar" style="background-color: #061F2F;">
-        <a class="navbar-brand" href="#" style="margin-left: 40%;">
-            <img src="stc.png" width="130" height="70" class="d-inline-block align-top" alt="">
+    <nav class="" style="background-color: #061F2F;align:center;padding-top:10px;padding-bottom:20px">
+        <a class="" href="#" >
+           <center> <img src="stc.png" width="200" height="100" class="d-inline-block align-top" alt=""></center>
         </a>
     </nav>
-    <div class="container">
+    
+    <div class="pro" style="padding-bottom:2%;padding-top:5%">
         <ul class="progressbar">
             <li class="active">General Information</li>
             <li>Q/A</li>
             <li>Interested Domain</li>
         </ul>
     </div><br><br><br>
-    <div class="container-fluid">
+    <div class="headd" >
         <p><b>Let's get started. So tell us who you are...</b></p>
+    </div>
         <form action="why.php" method="post">
             <div class="form">
+         
+            <!-- <div class="" style="margin-left:%"> -->
+  <!-- <div class=""> -->
+    <!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"> -->
+<!-- </div> -->
+
+
                 <label>1. Name:</label><br>
                 <input type="text" name="name" required>
                 <span id="clone"></span><br>
@@ -436,7 +507,7 @@ session_start();
             <p class="footer-company-about">
                 <span>Feel free to ask us anything.</span>
                 Our social handles</p>
-                <div class='demopadding'>
+                <div class='demopadding med'>
                                         <div class='icon social fb'><i class='fa fa-facebook'></i></div>
                                         <div class='icon social ig'><i class='fa fa-instagram'></i></div>
                                         <div class='icon social in'><i class='fa fa-linkedin'></i></div>
