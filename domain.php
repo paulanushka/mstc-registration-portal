@@ -13,10 +13,8 @@ if (
 
 <head>
     <title>STC Registration portal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
-        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style type="text/css">
         #search {
@@ -146,8 +144,12 @@ if (
         }
 
         .form {
-            margin-left: 30%;
-            margin-right: 30%;
+            margin-left: 53%;
+            /* margin-right: 5%; */
+            padding-right: 40%;
+            align:center;
+            width:100%
+        
         }
 
         #clone {
@@ -207,14 +209,52 @@ if (
         }
 
         @media (max-height:800px) {
-            footer {
-                position: static;
-            }
 
-            header {
-                padding-top: 40px;
-            }
-        }
+
+footer {
+    position: static;
+}
+
+header {
+    padding-top: 40px;
+}
+
+.form {
+margin-left: 10%;
+margin-right: 5%;
+/* align-items: center; */
+padding-left: 11%;
+align:center;
+            width:100%
+}
+.container {
+width: 100%;
+/* padding: -1%; */
+padding-left: -100px;
+}
+
+
+.pro{
+margin-right:7%;
+}
+
+.headd{
+/* padding-right:19%; */
+padding-top:-100px;
+margin-left:22%
+}
+
+.demopadding {
+/* margin:50px auto; */
+/* margin-top:10px; */
+width:140px;
+text-align:center;
+}
+
+.med{
+padding-bottom: 10px;
+}
+}
 
 
         .footer-distributed {
@@ -357,65 +397,72 @@ if (
 
 
         .demopadding {
-  margin:50px auto;
-  width:140px;
-  text-align:center;
-}
-.icon {
-	position:relative;
-	text-align:center;
-	width:0px;
-	height:0px;
-	padding:20px;
-	border-top-right-radius: 	20px;
-	border-top-left-radius: 	20px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 	20px; 
-	-moz-border-radius: 		20px 20px 20px 20px;
-	-webkit-border-radius: 		20px 20px 20px 20px;
-	-khtml-border-radius: 		20px 20px 20px 20px; 	
-	color:#FFFFFF;
-}
-.icon i {
-	font-size:20px;
-	position:absolute;
-	left:9px;
-	top:10px;
-}
-.icon.social {
-	float:left;
-	margin:0 5px 0 0;
-	cursor:pointer;
-	background:#f2f2f2 ;
-	color:#262626;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s; 	
-}
-.icon.social:hover {
-	background:#262626 ;
-	color:#6d6e71;
-	transition: 0.5s;
-	-moz-transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	-webkit-filter:	drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	-moz-filter: 	drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	-ms-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	-o-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
-	filter: 			drop-shadow(0 1px 10px rgba(0,0,0,.8));	 	
-}
-.icon.social.fb i {
-	left:13px;
-	top:10px;
-}
-.icon.social.ig i {
-	left:11px;
-}
-.icon.social.in i {
-	left:11px;
-}
+            margin: 50px auto;
+            width: 140px;
+            text-align: center;
+        }
+
+        .icon {
+            position: relative;
+            text-align: center;
+            width: 0px;
+            height: 0px;
+            padding: 20px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            -moz-border-radius: 20px 20px 20px 20px;
+            -webkit-border-radius: 20px 20px 20px 20px;
+            -khtml-border-radius: 20px 20px 20px 20px;
+            color: #FFFFFF;
+        }
+
+        .icon i {
+            font-size: 20px;
+            position: absolute;
+            left: 9px;
+            top: 10px;
+        }
+
+        .icon.social {
+            float: left;
+            margin: 0 5px 0 0;
+            cursor: pointer;
+            background: #f2f2f2;
+            color: #262626;
+            transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+        }
+
+        .icon.social:hover {
+            background: #262626;
+            color: #6d6e71;
+            transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            -webkit-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            -moz-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            -ms-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            -o-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+            filter: drop-shadow(0 1px 10px rgba(0, 0, 0, .8));
+        }
+
+        .icon.social.fb i {
+            left: 13px;
+            top: 10px;
+        }
+
+        .icon.social.ig i {
+            left: 11px;
+        }
+
+        .icon.social.in i {
+            left: 11px;
+        }
 
 
 
@@ -443,12 +490,13 @@ if (
 </head>
 
 <body>
-    <nav class="navbar navbar" style="background-color: #061F2F;">
-        <a class="navbar-brand" href="#" style="margin-left: 40%;">
-            <img src="stc.png" width="130" height="70" class="d-inline-block align-top" alt="">
+    <nav class="" style="background-color: #061F2F;align:center;padding-top:10px;padding-bottom:20px">
+        <a class="" href="#">
+            <center> <img src="stc.png" width="200" height="100" class="d-inline-block align-top" alt=""></center>
         </a>
     </nav>
-    <div class="container">
+    <!-- <div class="container"> -->
+    <div class="pro" style="padding-bottom:2%;padding-top:5%">
         <ul class="progressbar">
             <li class="active">General Information</li>
             <li class="active">Q/A</li>
@@ -456,34 +504,35 @@ if (
         </ul>
     </div><br><br><br>
     <form action="thanku.php" method="post">
-        <div class="form">
-            <i class="far fa-circle"></i> <b>Interested Domains</b>
-            <br> <br>
-            <p>(Please select below)</p>
+    <!-- <div class="headd" style="padding-left:17%"> -->
+    <center><p></b>  &nbsp; Interested Domains</b></p><p>
+    &nbsp;(Please select below)</p></center>
+    <!-- </div> -->
+    <center><div class="" >
+
+            
             <input class="checkbox" id="lists[new]" type="checkbox" name="tec" value="Yes" />
-            <label for="lists[new]"><span class="check">✓</span><img src="tech.png"
-                    style="width: 40px; height: 40px;">Technical</label>
+            <label for="lists[new]"><span class="check">✓</span><img src="tech.png" style="width: 50px; height: 40px;padding-right:5px">&nbsp;Technical</label>
             <input class="checkbox" id="lists[new1]" type="checkbox" name="man" value="Yes" />
-            <label for="lists[new1]"><span class="check">✓</span><img src="management.png"
-                    style="width: 40px; height: 40px;">Management</label>
+            <label for="lists[new1]"><span class="check">✓</span><img src="management.png" style="width: 70px; height: 40px;padding-left:25px;padding-right:-10px">&nbsp;&nbsp;&nbsp;Management</label>
             <input class="checkbox" id="lists[new2]" type="checkbox" name="des" value="Yes" />
-            <label for="lists[new2]"><span class="check">✓</span><img src="design.png"
-                    style="width: 40px; height: 40px;">Design</label>
-            <button class="btn btn-primary" style="margin-left: 200px; width: 100px; margin-left: 20%;">Submit</button>
+            <label for="lists[new2]"><span class="check">✓</span><img src="design.png" style="width: 50px; height: 40px;margin-left:-28px;">&nbsp;&nbsp;&nbsp;&nbsp;Design</label>
+           <center> <button class="btn btn-primary" style=" width: 100px;">Submit</button>
     </form>
 
-</div>
+    </div>
+    </center>
 
-<footer class="footer-distributed">
+    <footer class="footer-distributed">
         <div class="footer-left">
             <p class="footer-company-about">
                 <span>Feel free to ask us anything.</span>
                 Our social handles :</p>
-                <div class='demopadding'>
-                                        <div class='icon social fb'><i class='fa fa-facebook'></i></div>
-                                        <div class='icon social ig'><i class='fa fa-instagram'></i></div>
-                                        <div class='icon social in'><i class='fa fa-linkedin'></i></div>
-                                    </div>
+            <div class='demopadding med'>
+                <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+                <div class='icon social ig'><i class='fa fa-instagram'></i></div>
+                <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+            </div>
         </div>
         <div class="footer-center">
             <div class="vl"></div>

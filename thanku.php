@@ -61,29 +61,24 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
 <head>
     <title>STC Registration portal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <style type="text/css">
+    <style>
         body {
             background-color: #101C29;
             color: white;
         }
 
         #navBar {
-            position: fixed;
+            /* position: fixed; */
+            align: center;
             width: 100vw;
             height: 95px;
             background-color: #061F2F;
             transition: 0.2s;
             display: flex;
-            padding: 0.5%;
+            /* padding: 0.5%; */
             box-shadow: 50px;
-        }
-
-        .paragraph {
-            padding: 5%;
-            margin-left: 20%;
         }
 
         .vl {
@@ -99,6 +94,10 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             border-radius: 2px;
             box-shadow: 0px 1px 10px #999;
         }
+/* 
+        p {
+            margin-left: 25%;
+        } */
 
         .container {
             width: 100%;
@@ -120,7 +119,7 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
         .progressbar li:before {
             content: counter(step);
             counter-increment: step;
-            color: black;
+            color: BLACK;
             width: 30px;
             height: 30px;
             line-height: 30px;
@@ -155,14 +154,40 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             border-color: green;
         }
 
-        .progressbar li.active+li:after {
-            background-color: green;
+        input {
+            font-size: 15px;
+            padding: 1%;
+            color: white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid grey;
+            width: 80%;
+            min-width: 200px;
         }
 
         .form {
-            margin-left: 30%;
+            margin-left: 20%;
             margin-right: 30%;
+            align-content;:center
         }
+
+        #clone {
+            font-size: 25px;
+            opacity: 0;
+            font-family: sans-serif;
+        }
+
+        button {
+            float: right;
+            margin-right: 10%;
+        }
+
+        .paragraph {
+            margin-left: 30%;
+        }
+
+        
 
         #clone {
             font-size: 25px;
@@ -174,12 +199,26 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             float: right;
         }
 
+        .footer {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            background-color: #4D9BF7;
+            color: white;
+        }
+
+        .paragraph {
+            margin-left: 30%;
+        }
+
         footer {
             position: fixed;
             bottom: 0;
         }
 
         @media (max-height:800px) {
+
+
             footer {
                 position: static;
             }
@@ -187,7 +226,64 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             header {
                 padding-top: 40px;
             }
+
+            .form {
+            margin-left: 20%;
+            margin-right: 5%;
         }
+        .container {
+            width: 100%;
+            /* padding: -1%; */
+            padding-left: -100px;
+        }
+
+
+        .pro{
+    margin-right:7%;
+}
+ 
+.headd{
+    padding-right:19%;
+
+
+    padding-top:-100px;
+}
+
+.demopadding {
+  /* margin:50px auto; */
+  /* margin-top:10px; */
+  width:140px;
+  text-align:center;
+}
+
+.med{
+    padding-bottom: 10px;
+}
+        }
+
+        /* @media (max-height:600px){
+            footer {
+                position: static;
+            }
+
+            header {
+                padding-top: 40px;
+            }
+
+            
+            .form {
+            margin-left: 80%;
+            margin-right: 15%;
+        }
+
+        .demopadding {
+  margin:50px auto;
+  margin-top:10px;
+  width:140px;
+  text-align:center;
+}
+
+        } */
 
 
         .footer-distributed {
@@ -330,6 +426,68 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             margin-right: 3px;
             margin-bottom: 5px;
         }
+        .demopadding {
+  margin:50px auto;
+  /* margin-top:10px; */
+  width:140px;
+  text-align:center;
+}
+.icon {
+	position:relative;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding:20px;
+	border-top-right-radius: 	20px;
+	border-top-left-radius: 	20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 	20px; 
+	-moz-border-radius: 		20px 20px 20px 20px;
+	-webkit-border-radius: 		20px 20px 20px 20px;
+	-khtml-border-radius: 		20px 20px 20px 20px; 	
+	color:#FFFFFF;
+}
+.icon i {
+	font-size:20px;
+	position:absolute;
+	left:9px;
+	top:10px;
+}
+.icon.social {
+	float:left;
+	margin:0 5px 0 0;
+	cursor:pointer;
+	background:#f2f2f2 ;
+	color:#262626;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 	
+}
+.icon.social:hover {
+	background:#262626 ;
+	color:#6d6e71;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	-webkit-filter:	drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-moz-filter: 	drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-ms-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	-o-filter: 		drop-shadow(0 1px 10px rgba(0,0,0,.8));
+	filter: 			drop-shadow(0 1px 10px rgba(0,0,0,.8));	 	
+}
+.icon.social.fb i {
+	left:13px;
+	top:10px;
+}
+.icon.social.ig i {
+	left:11px;
+}
+.icon.social.in i {
+	left:11px;
+}
+
 
         @media (max-width: 880px) {
 
@@ -352,31 +510,81 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
 
         }
     </style>
-</head>
 
 <body>
-    <nav class="navbar navbar" style="background-color: #061F2F;">
-        <a class="navbar-brand" href="#" style="margin-left: 40%;">
-            <img src="stc.png" width="130" height="70" class="d-inline-block align-top" alt="">
+    <!-- Image and text -->
+    <nav class="" style="background-color: #061F2F;align:center;padding-top:10px;padding-bottom:20px">
+        <a class="" href="#" >
+           <center> <img src="stc.png" width="200" height="100" class="d-inline-block align-top" alt=""></center>
         </a>
     </nav>
-    <div class="verify">
-        <img src="verify.png" alt="verified" style="margin-left: 37%; margin-top: 5%; width: 240px; height: 240px;">
-    </div>
-    <div class="paragraph">
-        <h4>Thanks for registering with us</h4><br><br>
-        <p>You will be intimated of the further details on the email address provided by you shortly.</p>
-    </div>
+    
+    <!-- <div class="pro" style="padding-bottom:2%;padding-top:5%">
+        <ul class="progressbar">
+            <li class="active">General Information</li>
+            <li>Q/A</li>
+            <li>Interested Domain</li>
+        </ul>
+    </div> -->
+    <br><br>
+<center>
+    <!-- <div class=""> -->
+        <img src="verify.png" alt="verified" style="width: 240px; height: 240px;">
+    <!-- </div> -->
+    </center><br>
+    <!-- <div class="paragraph"> -->
+<center>
+        
+    <h4>Thanks for registering with us</h4><br>
+    </center>
+    <center>
+        
+    <p>You will be intimated of the further details on the email address provided by you shortly.</p>
+    </center>
+    
+        <!-- </div> -->
+
+    <!-- <div class="headd" >
+        <p><b>Let's get started. So tell us who you are...</b></p>
+    </div> -->
+        <!-- <form action="why.php" method="post">
+            <div class="form">
+          -->
+            <!-- <div class="" style="margin-left:%"> -->
+  <!-- <div class=""> -->
+    <!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"> -->
+<!-- </div> -->
+
+
+                <!-- <label>1. Name:</label><br>
+                <input type="text" name="name" required>
+                <span id="clone"></span><br>
+                <label>2. Mobile Number: (Without +91)</label><br>
+                <input type="tel" name="phone" required patter="[0-9]{10}">
+                <span id="clone"></span><br>
+                <label>3. Email id:</label><br>
+                <input type="email" name="email" required>
+                <span id="clone"></span><br>
+                <label>4. Registration No. </label><br>
+                <input type="text" name="regno" required>
+                <span id="clone"></span><br><br>
+                 <button class="btn btn-primary"  onclick="index3.html">Next</button> -->
+                <!-- <input class="btn btn-primary" type="submit" name="Submit" value="Next">
+            </div>
+        </form> --> 
+    <!-- </div> -->
     <footer class="footer-distributed">
         <div class="footer-left">
             <p class="footer-company-about">
                 <span>Feel free to ask us anything.</span>
                 Our social handles</p>
-            <div class="footer-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-            </div>
+                <div class='demopadding med'>
+                                        <div class='icon social fb'><i class='fa fa-facebook'></i></div>
+                                        <div class='icon social ig'><i class='fa fa-instagram'></i></div>
+                                        <div class='icon social in'><i class='fa fa-linkedin'></i></div>
+                                    </div>
         </div>
         <div class="footer-center">
             <div class="vl"></div>
@@ -387,7 +595,6 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             <p class="footer-company-name"><b>Student Technical Community</b></p>
         </div>
     </footer>
-
 </body>
 
 </html>

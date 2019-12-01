@@ -130,16 +130,52 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
             position: fixed;
             bottom: 0;
         }
-
         @media (max-height:800px) {
-            footer {
-                position: static;
-            }
 
-            header {
-                padding-top: 40px;
-            }
-        }
+
+footer {
+    position: static;
+}
+
+header {
+    padding-top: 40px;
+}
+
+.form {
+margin-left: 20%;
+margin-right: 5%;
+}
+.container {
+width: 100%;
+/* padding: -1%; */
+padding-left: -100px;
+}
+
+
+
+
+.headd{
+padding-right:1%;
+
+
+padding-top:-100px;
+}
+
+.demopadding {
+/* margin:50px auto; */
+/* margin-top:10px; */
+width:140px;
+text-align:center;
+}
+
+.pro{
+    margin-right:7%;
+}
+
+.med{
+padding-bottom: 10px;
+}
+}
 
 
         .footer-distributed {
@@ -368,23 +404,29 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
 </head>
 
 <body>
-    <nav class="navbar navbar" style="background-color: #061F2F;">
-        <a class="navbar-brand" href="#" style="margin-left: 40%;">
-            <img src="stc.png" width="130" height="70" class="d-inline-block align-top" alt="">
+<nav class="" style="background-color: #061F2F;align:center;padding-top:10px;padding-bottom:20px">
+        <a class="" href="#" >
+           <center> <img src="stc.png" width="200" height="100" class="d-inline-block align-top" alt=""></center>
         </a>
     </nav>
-    <div class="container">
+    <div class="pro" style="padding-bottom:2%;padding-top:5%">
+    <!-- <div class="pro" style="padding-bottom:2%;padding-top:5%;padding-left:7%;padding-right:10%"> -->
         <ul class="progressbar">
             <li class="active">General Information</li>
             <li>Q/A</li>
             <li>Interested Domain</li>
         </ul>
-    </div><br><br><br>
+    </div>
+   <br><br><br>
     <form action="domain.php" method="post">
         <div class="form">
-            <i class="far fa-circle"></i> <b>Why STC? </b><BR><br>
+        <div class="headd" >
+            <i class=""></i> <b>Why STC? </b><BR><br>
+    </div>
             <div class="form-group">
+                <div style= "width:70%">
                 <textarea class="form-control" id="exampleFormControlTextarea1" name="why" rows="5" placeholder="Please type your response here" style="background-color:#101C29 ; color: white;" required></textarea>
+                </div>
             </div>
             <!-- <button class="btn btn-primary" onclick="index4.html">Next</button> -->
             <input class="btn btn-primary" type="submit" name="Submit" value="Next">
@@ -395,7 +437,7 @@ if (!isset($_SESSION['name']) or !($_SESSION['phone']) or !($_SESSION['email']) 
                 <p class="footer-company-about">
                     <span>Feel free to ask us anything.</span>
                     Our social handles</p>
-                    <div class='demopadding'>
+                    <div class='demopadding med'>
                                         <div class='icon social fb'><i class='fa fa-facebook'></i></div>
                                         <div class='icon social ig'><i class='fa fa-instagram'></i></div>
                                         <div class='icon social in'><i class='fa fa-linkedin'></i></div>
