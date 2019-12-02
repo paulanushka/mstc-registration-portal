@@ -7,6 +7,8 @@ session_start();
     <title>STC Registration portal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #101C29;
@@ -157,7 +159,8 @@ session_start();
         }
 
         footer {
-            position: fixed;
+            /* position: fixed; */
+            position: relative;
             bottom: 0;
         }
 
@@ -394,12 +397,30 @@ session_start();
             }
 
         }
+
+        #heading-text {
+            font-size: 38;
+            margin-left: 0;
+            margin-bottom: 20;
+            text-align: center;
+            font-family: 'Noto Sans', sans-serif;
+            color: #e0f7fa;
+        }
+
+        label {
+            margin-top: 56;
+            font-size: 24;
+            font-weight: bold;
+            color: #e0f7fa;
+            font-family: 'Prompt', sans-serif;
+        }
+
     </style>
 
 <body>
     <!-- Image and text -->
-    <nav class="navbar navbar" style="background-color: #061F2F;">
-        <a class="navbar-brand" href="#" style="margin-left: 40%;">
+    <nav class="navbar navbar" style="background-color: #061F2F; justify-content: center;">
+        <a class="navbar-brand" href="#">
             <img src="stc.png" width="130" height="70" class="d-inline-block align-top" alt="">
         </a>
     </nav>
@@ -411,23 +432,24 @@ session_start();
         </ul>
     </div><br><br><br>
     <div class="container-fluid">
-        <p><b>Let's get started. So tell us who you are...</b></p>
+        <p id="heading-text">Let's get started. So tell us who you are...</p>
         <form action="why.php" method="post">
             <div class="form">
-                <label>1. Name:</label><br>
+                <label>Name:</label><br>
                 <input type="text" name="name" required>
                 <span id="clone"></span><br>
-                <label>2. Mobile Number: (Without +91)</label><br>
-                <input type="tel" name="phone" required patter="[0-9]{10}">
+                <label>Mobile Number: (Without +91)</label><br>
+                <input type="tel" name="phone" required pattern="[0-9]{10}">
                 <span id="clone"></span><br>
-                <label>3. Email id:</label><br>
-                <input type="email" name="email" required>
+                <label>Email id:</label><br>
+                <!-- <input type="email" name="email" required> -->
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required style="background-color: transparent">
                 <span id="clone"></span><br>
-                <label>4. Registration No. </label><br>
-                <input type="text" name="regno" required>
+                <label>Registration No. </label><br>
+                <input type="text" name="regno" pattern="^1[8-9]{1}[A-Za-z]{3}[0-9]{4}$" required>
                 <span id="clone"></span><br><br>
                 <!-- <button class="btn btn-primary"  onclick="index3.html">Next</button> -->
-                <input class="btn btn-primary" type="submit" name="Submit" value="Next">
+                <input class="btn btn-primary" type="submit" name="Submit" value="Next" style="margin-top: 56;">
             </div>
         </form>
     </div>

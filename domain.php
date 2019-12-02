@@ -414,6 +414,13 @@ if (
 .icon.social.in i {
 	left:11px;
 }
+.domain-select {
+    padding: 10px;
+    text-align: left;
+}
+.domain-select img {
+    margin-right: 10px;
+}
 
         @media (max-width: 880px) {
 
@@ -458,18 +465,22 @@ if (
             <br> <br>
             <p>(Please select below)</p>
             <input class="checkbox" id="lists[new]" type="checkbox" name="tec" value="Yes" />
-            <label for="lists[new]"><span class="check">✓</span><img src="tech.png"
-                    style="width: 40px; height: 40px;">Technical</label>
+            <label for="lists[new]" class="domain-select">
+                <span class="check">✓</span>
+                <img src="tech.png"
+                    style="width: 40px; height: 40px;">
+                Technical
+            </label>
             <input class="checkbox" id="lists[new1]" type="checkbox" name="man" value="Yes" />
-            <label for="lists[new1]"><span class="check">✓</span><img src="management.png"
+            <label for="lists[new1]" class="domain-select"><span class="check">✓</span><img src="management.png"
                     style="width: 40px; height: 40px;">Management</label>
             <input class="checkbox" id="lists[new2]" type="checkbox" name="des" value="Yes" />
-            <label for="lists[new2]"><span class="check">✓</span><img src="design.png"
+            <label for="lists[new2]"  class="domain-select"><span class="check">✓</span><img src="design.png"
                     style="width: 40px; height: 40px;">Design</label>
             <button class="btn btn-primary" style="margin-left: 200px; width: 100px; margin-left: 20%;">Submit</button>
     </form>
 
-    <footer class="footer-distributed">
+    <!-- <footer class="footer-distributed">
         <div class="footer-left">
             <p class="footer-company-about">
                 <span>Feel free to ask us anything.</span>
@@ -488,8 +499,27 @@ if (
             <img src="stc.png">
             <p class="footer-company-name"><b>Student Technical Community</b></p>
         </div>
-    </footer>
+    </footer> -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <p class="footer-company-about">
+                <span>Feel free to ask us anything.</span>
+                Our social handles</p>
+                <div class='demopadding'>
+                                        <div class='icon social fb'><a href="https://www.facebook.com/mstcvit/?ref=br_rs"><i class='fa fa-facebook'></i></a></div>
+                                        <div class='icon social ig'><a href="https://www.instagram.com/mstcvit/?hl=en"><i class='fa fa-instagram'></i></a></div>
+                                        <div class='icon social in'><a href="https://www.linkedin.com/company/micvitvellore/about/"><i class='fa fa-linkedin'></i></a></div>
+                                    </div>
+        </div>
+        <div class="footer-center">
+            <div class="vl"></div>
+        </div>
+        <div class="footer-right">
 
+            <img src="stc.png">
+            <p class="footer-company-name"><b>Student Technical Community</b></p>
+        </div>
+    </footer>
 </body>
 
 </html>
